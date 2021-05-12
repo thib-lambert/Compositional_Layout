@@ -4,7 +4,9 @@
 This project has for goal to present you how to construct UICollectionView with Compostional Layout.
 
 ## Project presentation
-Project use json data for avoid network call. The data are from to SpaceX web service and only needed keys are fetch for simplify the code. Clean Architecture is used.
+Project use json data for avoid network call. The data are from to SpaceX web service and only needed keys are fetch for simplify the code.
+
+Clean Architecture is used.
 
 ## Prerequisite
 
@@ -14,8 +16,11 @@ Project use json data for avoid network call. The data are from to SpaceX web se
 ## Help
 ### DiffableDataSource
 `UICollectionViewDataSource` is replaced by `UICollectionViewDiffableDataSource<SectionType, ItemType>`
+
 SectionType and ItemType need to be Hashable. 
+
 You can use UICollectionViewDelegate for manage tap on cells.
+
 ***
 
 ### Create cells
@@ -82,6 +87,7 @@ private func reloadData(section: SectionType, items: [ItemType]) {
 
 ### Manage layout
 This section will explain how to create layout for collectionView.
+
 ⚠️ Sizes always refer to the parent. ⚠️
 
 **How to add layout ?**

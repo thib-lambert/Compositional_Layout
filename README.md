@@ -117,11 +117,11 @@ private func createSection(index: Int, environment: NSCollectionLayoutEnvironmen
 
 	// Add header on section
 	let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-											heightDimension: .estimated(50))
+						heightDimension: .estimated(50))
 
 	let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize,
-																	elementKind: "sectionHeaderKind",
-																	alignment: .top)
+									elementKind: "sectionHeaderKind",
+									alignment: .top)
 	section.boundarySupplementaryItems = [sectionHeader]
 
 	return section
@@ -133,15 +133,15 @@ private func createSection(index: Int, environment: NSCollectionLayoutEnvironmen
 private func prepareLayout() -> NSCollectionLayoutSection {
 	// Item
 	let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),
-										  heightDimension: .fractionalWidth(1))
+					      heightDimension: .fractionalWidth(1))
 	let item = NSCollectionLayoutItem(layoutSize: itemSize)
 
 	// Group
 	let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
-										   heightDimension: .estimated(200))
-	let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, 
-												   subitem: item, 
-												   count: 2)
+					       heightDimension: .estimated(200))
+	let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
+						       subitem: item, 
+						       count: 2)
 
 	// Section
 	let section = NSCollectionLayoutSection(group: group)

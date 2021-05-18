@@ -21,8 +21,6 @@ SectionType and ItemType need to be Hashable.
 
 You can use UICollectionViewDelegate for manage tap on cells.
 
-***
-
 ### - Create cells
 ```swift
 UICollectionViewDiffableDataSource<SectionType, ItemType>(collectionView: collectionView)  { 
@@ -42,7 +40,6 @@ let dataSource = UICollectionViewDiffableDataSource<SectionType, ItemType>(colle
 	return cell
 })
 ```
-***
 
 ### - Create UICollectionReusableView (header / footer)
 > supplementaryViewProvider: UICollectionViewDiffableDataSource<SectionIdentifierType, ItemIdentifierType>.SupplementaryViewProvider?
@@ -60,8 +57,6 @@ private func supplementary(collectionView: UICollectionView, kind: String, index
 	return header ?? UICollectionReusableView()
 }
 ```
-
-***
 
 ### - Reload data in collection view
 The dataSource manage automatically `numberOfSections(in collectionView: UICollectionView) -> Int` and `collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int`.
@@ -82,8 +77,6 @@ private func reloadData(section: SectionType, items: [ItemType]) {
 	self.dataSource.apply(snapshot)
 }
 ```
-
-*** 
 
 ### - Manage layout
 This section will explain how to create layout for collectionView.

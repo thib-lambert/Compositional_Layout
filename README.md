@@ -1,4 +1,4 @@
-﻿# Welcome to Compositional-Layout-Example project
+# Welcome to Compositional-Layout-Example project
 
 ## Project goal
 This project has for goal to present you how to construct UICollectionView with Compostional Layout.
@@ -50,7 +50,7 @@ let dataSource = UICollectionViewDiffableDataSource<SectionType, ItemType>(colle
 This func is equivalent to `collectionView(_:viewForSupplementaryElementOfKind:at:)`
 
 **How to use ?**
-```
+```swift
 dataSource.supplementaryViewProvider = self.supplementary(collectionView:kind:indexPath:)
 
 

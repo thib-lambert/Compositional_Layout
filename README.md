@@ -24,7 +24,7 @@ You can use UICollectionViewDelegate for manage tap on cells.
 ***
 
 ### Create cells
-```
+```swift
 UICollectionViewDiffableDataSource<SectionType, ItemType>(collectionView: collectionView)  { 
 (collectionView: UICollectionView, indexPath: IndexPath, item: ItemType) -> UICollectionViewCell? in 
 	// configure and return cell
@@ -34,7 +34,7 @@ UICollectionViewDiffableDataSource<SectionType, ItemType>(collectionView: collec
 This func is equivalent to `collectionView(_:cellForItemAt:)`
 
 **How to use ?**
-```
+```swift
 let dataSource = UICollectionViewDiffableDataSource<SectionType, ItemType>(collectionView: self.collectionView, cellProvider: { collectionView, indexPath, itemType in
 	let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? Cell
 	cell.item = itemType
@@ -67,7 +67,7 @@ private func supplementary(collectionView: UICollectionView, kind: String, index
 The dataSource manage automatically `numberOfSections(in collectionView: UICollectionView) -> Int` and `collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int`.
 
 **How to use ?**
-```
+```swift
 private func reloadData(section: SectionType, items: [ItemType]) {
 
 	var snapshot = NSDiffableDataSourceSnapshot<SectionType, ItemType>()
@@ -91,19 +91,19 @@ This section will explain how to create layout for collectionView.
 ⚠️ Sizes always refer to the parent. ⚠️
 
 **How to add layout ?**
-```
+```swift
 // Create layout for collection view
 self.collectionView.collectionViewLayout = self.createLayout()
 ```
 
 **How to create layout ?**
-```
+```swift
 private func createLayout() -> UICollectionViewLayout {
 	UICollectionViewCompositionalLayout(sectionProvider: self.createSection(index: environment:))
 }
 ```
 
-```
+```swift
 private func createSection(index: Int, environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
 
 	// Get section type for create different layout
@@ -128,7 +128,7 @@ private func createSection(index: Int, environment: NSCollectionLayoutEnvironmen
 }
 ```
 
-```
+```swift
 /// Create line with two items square
 private func prepareLayout() -> NSCollectionLayoutSection {
 	// Item

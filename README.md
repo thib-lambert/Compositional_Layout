@@ -1,20 +1,20 @@
 # Welcome to Compositional-Layout-Example project
 
-## Project goal
+## 📚 Project goal
 This project has for goal to present you how to construct UICollectionView with Compostional Layout.
 
-## Project presentation
+### - Project presentation
 Project use json data for avoid network call. The data are from to SpaceX web service and only needed keys are fetch for simplify the code.
 
 Clean Architecture is used.
 
-## Prerequisite
+## 🔍 Prerequisite
 
  - Version minimum required: **iOS 13**
  - Know how to use enum with data inside
 
-## Help
-### DiffableDataSource
+## 🔠 Usage
+### - DiffableDataSource
 `UICollectionViewDataSource` is replaced by `UICollectionViewDiffableDataSource<SectionType, ItemType>`
 
 SectionType and ItemType need to be Hashable. 
@@ -23,7 +23,7 @@ You can use UICollectionViewDelegate for manage tap on cells.
 
 ***
 
-### Create cells
+### - Create cells
 ```swift
 UICollectionViewDiffableDataSource<SectionType, ItemType>(collectionView: collectionView)  { 
 (collectionView: UICollectionView, indexPath: IndexPath, item: ItemType) -> UICollectionViewCell? in 
@@ -44,7 +44,7 @@ let dataSource = UICollectionViewDiffableDataSource<SectionType, ItemType>(colle
 ```
 ***
 
-### Create UICollectionReusableView (header / footer)
+### - Create UICollectionReusableView (header / footer)
 > supplementaryViewProvider: UICollectionViewDiffableDataSource<SectionIdentifierType, ItemIdentifierType>.SupplementaryViewProvider?
 
 This func is equivalent to `collectionView(_:viewForSupplementaryElementOfKind:at:)`
@@ -63,7 +63,7 @@ private func supplementary(collectionView: UICollectionView, kind: String, index
 
 ***
 
-### Reload data in collection view
+### - Reload data in collection view
 The dataSource manage automatically `numberOfSections(in collectionView: UICollectionView) -> Int` and `collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int`.
 
 **How to use ?**
@@ -85,7 +85,7 @@ private func reloadData(section: SectionType, items: [ItemType]) {
 
 *** 
 
-### Manage layout
+### - Manage layout
 This section will explain how to create layout for collectionView.
 
 ⚠️ Sizes always refer to the parent. ⚠️

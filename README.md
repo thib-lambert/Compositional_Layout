@@ -104,8 +104,7 @@ private func createSection(index: Int, environment: NSCollectionLayoutEnvironmen
 	var section: NSCollectionLayoutSection!
 
 	switch sectionType {
-		default: 
-			section = self.prepareLayout()
+		default: section = self.prepareLayout()
 	}
 
 	// Add header on section

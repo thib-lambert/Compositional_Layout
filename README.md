@@ -1,5 +1,14 @@
 # Welcome to Compositional-Layout-Example project
 
+## 🗺️ Navigation
+
+<ul>
+	<li><a href="#-project-goal">📚 Project goal</a></li>
+	<li><a href="#-prerequisite">🔍 Prerequisite</a></li>
+	<li><a href="#-layout-organization">🛠 Layout organization</a></li>
+	<li><a href="#-usage">🔠 Usage</a></li>
+</ul>
+
 ## 📚 Project goal
 This project has for goal to present you how to construct UICollectionView with Compostional Layout.
 
@@ -18,14 +27,14 @@ Clean Architecture is used.
 ![Layout schema](https://www.zealousweb.com/wp-content/uploads/2020/10/Design-02.jpg)
 
 ## 🔠 Usage
-### - DiffableDataSource
+### -- DiffableDataSource
 `UICollectionViewDataSource` is replaced by `UICollectionViewDiffableDataSource<SectionType, ItemType>`
 
 SectionType and ItemType need to be Hashable. 
 
 You can use UICollectionViewDelegate for manage tap on cells.
 
-### - Create cells
+### — Create cells
 ```swift
 UICollectionViewDiffableDataSource<SectionType, ItemType>(collectionView: collectionView)  { 
 (collectionView: UICollectionView, indexPath: IndexPath, item: ItemType) -> UICollectionViewCell? in 

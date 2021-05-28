@@ -1,3 +1,4 @@
+
 # Welcome to Compositional-Layout-Example project
 
 ## 🗺️ Navigation
@@ -9,11 +10,11 @@
 	<li>
 		<a href="#-usage">🔠 Usage</a>
 		<ul>
-			<li><a href="#--diffabledatasource">📌 Diffable Data Source</a></li>
+			<li><a href="#-diffabledatasource">📌 Diffable Data Source</a></li>
 			<li><a href="#-create-cells">📌 Create cells</a></li>
-			<li><a href="#--create-uicollectionreusableview-header--footer">📌 Create UICollectionReusableView (header / footer)</a></li>
-			<li><a href="#--reload-data-in-collection-view">📌 Reload data in collection view</a></li>
-			<li><a href="#--manage-layout">📌 Manage layout</a></li>
+			<li><a href="#-create-uicollectionreusableview-header--footer">📌 Create UICollectionReusableView (header / footer)</a></li>
+			<li><a href="#-reload-data-in-collection-view">📌 Reload data in collection view</a></li>
+			<li><a href="#-manage-layout">📌 Manage layout</a></li>
 		</ul>
 	</li>
 </ul>
@@ -35,7 +36,7 @@ Clean Architecture is used.
 ![Layout schema](https://www.zealousweb.com/wp-content/uploads/2020/10/Design-02.jpg)
 
 ## 🔠 Usage
-### - DiffableDataSource
+### — DiffableDataSource
 `UICollectionViewDataSource` is replaced by `UICollectionViewDiffableDataSource<SectionType, ItemType>`
 
 SectionType and ItemType need to be Hashable. 
@@ -62,7 +63,7 @@ let dataSource = UICollectionViewDiffableDataSource<SectionType, ItemType>(colle
 })
 ```
 
-### - Create UICollectionReusableView (header / footer)
+### — Create UICollectionReusableView (header / footer)
 > supplementaryViewProvider: UICollectionViewDiffableDataSource<SectionIdentifierType, ItemIdentifierType>.SupplementaryViewProvider?
 
 This func is equivalent to `collectionView(_:viewForSupplementaryElementOfKind:at:)`
@@ -79,7 +80,7 @@ private func supplementary(collectionView: UICollectionView, kind: String, index
 }
 ```
 
-### - Reload data in collection view
+### — Reload data in collection view
 The dataSource manage automatically `numberOfSections(in collectionView: UICollectionView) -> Int` and `collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int`.
 
 **How to use ?**
@@ -99,7 +100,7 @@ private func reloadData(section: SectionType, items: [ItemType]) {
 }
 ```
 
-### - Manage layout
+### — Manage layout
 This section will explain how to create layout for collectionView.
 
 ⚠️ Sizes always refer to the parent. ⚠️

@@ -6,13 +6,21 @@
 	<li><a href="#-project-goal">📚 Project goal</a></li>
 	<li><a href="#-prerequisite">🔍 Prerequisite</a></li>
 	<li><a href="#-layout-organization">🛠 Layout organization</a></li>
-	<li><a href="#-usage">🔠 Usage</a></li>
+	<li>
+		<a href="#-usage">🔠 Usage</a>
+		<ul>
+			<li><a href="#--diffabledatasource">📌 Diffable Data Source</a></li>
+			<li><a href="#--create-cells">📌 Create cells</a></li>
+			<li><a href="#--create-uicollectionreusableview-header--footer">📌 Create UICollectionReusableView (header / footer)</a></li>
+			<li><a href="#--reload-data-in-collection-view">📌 Reload data in collection view</a></li>
+			<li><a href="#--manage-layout">📌 Manage layout</a></li>
+		</ul>
+	</li>
 </ul>
 
 ## 📚 Project goal
 This project has for goal to present you how to construct UICollectionView with Compostional Layout.
 
-### - Project presentation
 Project use json data for avoid network call. The data are from to SpaceX web service and only needed keys are fetch for simplify the code.
 
 Clean Architecture is used.
@@ -27,7 +35,7 @@ Clean Architecture is used.
 ![Layout schema](https://www.zealousweb.com/wp-content/uploads/2020/10/Design-02.jpg)
 
 ## 🔠 Usage
-### -- DiffableDataSource
+### - DiffableDataSource
 `UICollectionViewDataSource` is replaced by `UICollectionViewDiffableDataSource<SectionType, ItemType>`
 
 SectionType and ItemType need to be Hashable. 

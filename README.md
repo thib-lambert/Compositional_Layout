@@ -10,7 +10,7 @@
 		<a href="#-usage">🔠 Usage</a>
 		<ul>
 			<li><a href="#--diffabledatasource">📌 Diffable Data Source</a></li>
-			<li><a href="#--create-cells">📌 Create cells</a></li>
+			<li><a href="#-create-cells">📌 Create cells</a></li>
 			<li><a href="#--create-uicollectionreusableview-header--footer">📌 Create UICollectionReusableView (header / footer)</a></li>
 			<li><a href="#--reload-data-in-collection-view">📌 Reload data in collection view</a></li>
 			<li><a href="#--manage-layout">📌 Manage layout</a></li>

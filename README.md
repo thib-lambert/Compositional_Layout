@@ -13,6 +13,10 @@ Clean Architecture is used.
  - Version minimum required: **iOS 13**
  - Know how to use enum with data inside
 
+## 🛠 Layout organization
+
+![Layout schema](https://www.zealousweb.com/wp-content/uploads/2020/10/Design-02.jpg)
+
 ## 🔠 Usage
 ### - DiffableDataSource
 `UICollectionViewDataSource` is replaced by `UICollectionViewDiffableDataSource<SectionType, ItemType>`
